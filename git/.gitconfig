@@ -28,5 +28,5 @@
     gr = log --graph --pretty=format:\"%Cred%h %Cblue%ar%Creset %Cgreen%an%Creset %s %Cred%d\"
     where = branch -av --contains
 [core]
-    excludesfile = /home/lukin/.gitignore
+    excludesfile = ~/.gitignore
     pager = less -FRSX
