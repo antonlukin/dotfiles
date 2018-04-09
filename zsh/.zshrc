@@ -12,6 +12,7 @@ alias v="vim"
 alias l="ls --color=yes"
 alias ll="ls -FHal --color=yes"
 
+bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 HISTFILE=~/.history
