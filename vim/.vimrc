@@ -1,13 +1,3 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'morhetz/gruvbox'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'sjl/badwolf'
-
-call vundle#end()
-
 filetype plugin indent on
 filetype indent on      " load filetype-specific indent files
 
