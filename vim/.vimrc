@@ -1,3 +1,6 @@
+scriptencoding utf-8
+set encoding=utf-8
+
 filetype plugin indent on
 filetype indent on      " load filetype-specific indent files
 
@@ -8,15 +11,12 @@ set nocompatible
 syntax on               " enable syntax processing
 
 set background=dark
-colorscheme badwolf
+colorscheme gruvbox
 
 " gruvbox options
 if get(g:, 'colors_name', 'default') == 'gruvbox'
     let g:gruvbox_contrast_dark='hard'
     let g:gruvbox_bold='0'
-
-    hi StatusLine ctermbg=15 ctermfg=24
-    hi StatusLineNC ctermbg=15 ctermfg=239
 endif
 
 
@@ -29,11 +29,12 @@ set shiftwidth=4        " shift blocs
 set cindent
 set autoindent
 
+set list
+set listchars=tab:··,trail:·
 
 " ui config
 set number              " show line numbers
 set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
 set ch=1                " command line height
 
 set novisualbell        " power off visual bell
@@ -78,7 +79,6 @@ set mouse=a
 set mousemodel=popup
 
 
-set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
 
