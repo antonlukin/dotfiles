@@ -14,9 +14,10 @@ alias ll="ls -FHal --color=yes"
 
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
-
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "$terminfo[kcuu1]" up-line-or-beginning-search
+bindkey "$terminfo[kcud1]" down-line-or-beginning-search
 
 HISTFILE=~/.history
 HISTSIZE=10500
@@ -57,8 +58,8 @@ function git_prompt_string() {
     local git_where="$(parse_git_branch)"
 
     if [ -n "$git_where" ]; then
-		echo "%{$reset_color%}[%{$fg[cyan]%}$(parse_git_state)%{$reset_color%}] ";
-	fi
+        echo "%{$reset_color%}[%{$fg[cyan]%}$(parse_git_state)%{$reset_color%}] ";
+    fi
 }
 
 function parse_git_state() {
